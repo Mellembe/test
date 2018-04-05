@@ -1,7 +1,5 @@
-#ifdef __MINGW32__
-#include <windows.h>
-#endif
 
+#include <windows.h>
 #include <stdio.h>
 #include <string.h>
 #include <openssl/evp.h>
@@ -57,14 +55,8 @@ void PrintSHA256Hash(unsigned char digest[EVP_MAX_MD_SIZE])
     snprintf(&(buf[2*i]), 3, "%02x", digest[i]);
     }
 
-#ifdef __MINGW32__
 
  MessageBox(NULL, buf, "Digest", MB_OK);
  
-#else
- 
- printf("Digest is: %s\n", buf);
-
-#endif
- 
+ //printf("Digest is: %s\n", buf);
 }

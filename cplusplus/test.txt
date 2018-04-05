@@ -1,0 +1,1 @@
+Often the only way to deal with text, especially when it contains numeric values in unknown locations is to read it in a single block, as shown here, or read it in small chunks and use a technique called "parsing". This reference shows how an entire text file can be read into memory. Parsing is dealt with in another web page.
